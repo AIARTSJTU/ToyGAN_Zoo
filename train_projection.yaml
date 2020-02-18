@@ -1,0 +1,45 @@
+# meta
+exp_name: snprojection2
+mode: train
+cuda: true
+gpu_number: 1
+
+# data
+dataset: mixguassian
+data_root: ./data/MixtureGaussianCXH.pk
+
+# system
+seed: 1
+
+# model
+G_h_size: 64
+D_h_size: 64
+z_size: 128
+load_ckpt: None
+num_outcomes: 1
+n_class: 9
+
+# training
+total_iters: 10000
+batch_size: 100
+beta1: 0.5
+beta2: 0.999
+lr_G: 0.0003
+lr_D: 0.0003
+G_updates: 1
+D_updates: 2
+effective_batch_size: 100
+lambda_gp: 10
+lambda1: 1
+lambda2: 10
+lambda3: 100
+lr_decay_iters: 800000
+decay: 0
+weight_decay: 0
+sample_batch_size: 1000
+adam_eps: 1e-08
+extra_folder: "./OUTPUT/Ours_Extra6"
+
+# training log
+gen_every: 100
+print_every: 50
